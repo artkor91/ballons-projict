@@ -134,6 +134,63 @@ body {
   margin-bottom: 5rem;
 }
 
+.title-second {
+  font-weight: 800;
+  font-size: 3.6rem;
+  line-height: 4.3rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%), no-repeat;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.title-third {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 140%;
+  letter-spacing: 0.2rem;
+}
+
+.mar-bot-80px {
+  margin-bottom: 8rem;
+}
+
+.mar-bot-10px {
+  margin-bottom: 1rem;
+}
+
+.mar-bot-20px {
+  margin-bottom: 2rem;
+}
+
+.mar-bot-30px {
+  margin-bottom: 3rem;
+}
+
+.mar-bot-50px {
+  margin-bottom: 5rem;
+}
+
+.tile-animatin-skew {
+  transition: all 0.4s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.tile-animatin-skew:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.05);
+}
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -178,6 +235,63 @@ body {
           animation-fill-mode: backwards;
 }
 
+.btn-text:link, .btn-text:visited {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.2rem;
+  color: #A14F03;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px solid #A14F03;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+  display: inline-block;
+}
+.btn-text:hover {
+  background: #A14F03;
+  color: #FFFFFF;
+  transform: translateY(-0.2rem);
+}
+.btn-text:active {
+  transform: translateY(0rem);
+}
+
+.composition {
+  position: relative;
+}
+.composition__foto {
+  width: 60%;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  position: absolute;
+  transition: 0.3s all;
+  outline-offset: 1rem;
+}
+.composition__foto_n1 {
+  top: 0;
+  left: 2rem;
+  z-index: 1;
+}
+.composition__foto_n2 {
+  top: 10rem;
+  right: 0;
+  z-index: 2;
+}
+.composition__foto_n3 {
+  top: 18rem;
+  left: 4rem;
+  z-index: 3;
+}
+.composition__foto:hover {
+  transform: scale(1.05);
+  z-index: 20;
+  outline: 1.5rem solid #BA8554;
+}
+.composition:hover .composition__foto:not(:hover) {
+  transform: scale(0.95);
+}
+
 .header {
   height: 95vh;
   background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/header-background.jpg) center/cover no-repeat;
@@ -203,7 +317,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background: rgba(243, 154, 58, 0.5411764706);
   margin: 0 auto;
 }
 .row::after {
@@ -216,7 +329,6 @@ body {
 }
 
 [class^=col-] {
-  background: #5fe695;
   float: left;
 }
 [class^=col-]:not(:last-child) {
@@ -245,4 +357,8 @@ body {
 
 .col-3-of-4 {
   width: calc(3*((100% - 3*6rem)/4) + 2*6rem);
+}
+
+.section-about {
+  padding-top: 8rem;
 }/*# sourceMappingURL=style.css.map */
