@@ -1,0 +1,98 @@
+.card-tour
+    height: 50rem
+    position: relative
+    perspective: 150rem
+    -moz-perspective: 150rem
+    &__side
+        position: absolute
+        height: 50rem
+        transition: .7s all ease-out
+        color: $color-white
+        top: 0
+        left: 0
+        width: 100%
+        backface-visibility: hidden
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1)
+        border-radius: .3rem
+        overflow: hidden
+        &_front
+            background: #FFFFFF
+        &_back
+            background: linear-gradient(90.05deg, $color-brown-lite 0.03%, $color-brown-dark 99.94%)
+            transform: rotateY(180deg)
+    &:hover &__side_front
+        transform: rotateY(-180deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)
+    &__img
+        height: 24rem
+        
+        background-blend-mode: hard-light
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+        margin-bottom: 4.5rem
+        &_1
+            background: $color-brown-lite url("../img/card-tour-1.png")
+        &_2
+            background: $color-brown-lite url("../img/card-tour-2.png")
+        &_3
+            background: $color-brown-lite url("../img/card-tour-3.png")
+    &__title
+        font-weight: 300
+        font-size: 2.8rem
+        line-height: 3.4rem
+        text-align: right
+        letter-spacing: .2rem
+        color: $color-white
+        text-transform: uppercase
+        position: absolute
+        right: 0
+        top: 17.7rem
+    &__span
+        background: linear-gradient(90deg, $color-brown-lite 0.04%, $color-brown-dark 100%)
+        padding: 1rem 2rem .3rem 2rem
+        &_2
+            position: absolute
+            top: 3.4rem
+            right: 0
+            z-index: 1
+            padding-bottom: 1rem
+            padding-top: .3rem
+    &__descript
+        ul
+            list-style: none
+            li
+                font-weight: 700
+                font-size: 1.6rem
+                line-height: 1.9rem
+                letter-spacing: .2rem
+                color: $color-gray
+                text-align: center
+                &:not(:last-child)
+                    margin-bottom: 2rem
+                span
+                    border-bottom: 1px solid $color-gray
+    &__backside-box
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &__text
+        margin-bottom: 8.7rem
+        &_1
+            font-size: $font-size-par
+            font-weight: 300
+            line-height: 1.9rem
+            text-align: center
+            letter-spacing: .2rem
+            text-transform: uppercase
+        &_2
+            font-weight: 500
+            font-size: 6rem
+            line-height: 7.2rem
+            letter-spacing: .2rem
+            text-transform: uppercase
+            text-align: center
+
+
+
+    
