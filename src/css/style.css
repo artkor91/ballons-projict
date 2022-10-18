@@ -146,6 +146,9 @@ body {
   text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
   text-align: center;
 }
+.title-second_white {
+  color: #FFFFFF;
+}
 
 .title-third {
   font-weight: 700;
@@ -435,6 +438,57 @@ body {
   text-align: center;
 }
 
+.feedback-card {
+  max-width: 80%;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding: 6rem 9.5rem;
+  transform: skewX(-15deg);
+}
+.feedback-card > * {
+  transform: skewX(15deg);
+}
+.feedback-card__img {
+  width: 16.7rem;
+  height: 16.7rem;
+  background: green;
+  float: left;
+  border-radius: 10rem;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  margin-right: 4rem;
+  overflow: hidden;
+  position: relative;
+}
+.feedback-card__img img {
+  height: 100%;
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+.feedback-card__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -20%);
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  letter-spacing: 0.2rem;
+  color: #FFFFFF;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.feedback-card:hover .feedback-card__name {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.feedback-card:hover img {
+  transform: scale(1);
+  filter: blur(0.3rem) brightness(70%);
+}
+
 .header {
   height: 95vh;
   background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/header-background.jpg) center/cover no-repeat;
@@ -515,4 +569,9 @@ body {
 
 .section-tour {
   padding-top: 21rem;
+}
+
+.section-feedback {
+  padding-top: 8rem;
+  margin-bottom: 8rem;
 }/*# sourceMappingURL=style.css.map */
