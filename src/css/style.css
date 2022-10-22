@@ -215,6 +215,7 @@ body {
   position: relative;
   font-size: 2rem;
   border: none;
+  cursor: pointer;
 }
 .btn:hover {
   transform: translateY(-4px);
@@ -246,6 +247,13 @@ body {
           animation: BtnToUp 0.5s ease-out 1s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+}
+.btn_brown {
+  background-color: #A14F03;
+  color: #FFFFFF;
+}
+.btn_brown::after {
+  background-color: #A14F03;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -529,7 +537,10 @@ body {
   padding: 5rem;
 }
 .form__group:not(:last-child) {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+}
+.form__group:nth-child(4) {
+  margin-bottom: 4rem;
 }
 .form__input {
   font-weight: 400;
@@ -560,7 +571,7 @@ body {
   display: block;
   margin-top: 1rem;
   margin-left: 1.5rem;
-  transition: 0.7s all;
+  transition: 0.5s all;
 }
 .form__input:-moz-placeholder-shown + .form__label {
   opacity: 0;
@@ -576,6 +587,50 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-3rem);
+}
+.form__group-radio {
+  width: 40%;
+  display: inline-block;
+}
+.form__label-radio {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.2rem;
+  color: #777777;
+  cursor: pointer;
+  position: relative;
+  padding-left: 1.2rem;
+}
+.form__button-radio {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 0.5rem solid #A14F03;
+  display: block;
+  position: absolute;
+  top: -0.6rem;
+  left: -2.8rem;
+}
+.form__button-radio::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  background: #A14F03;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.2 all;
+}
+.form__input-radio {
+  display: none;
+}
+.form__input-radio:checked ~ .form__label-radio .form__button-radio::after {
+  opacity: 1;
 }
 
 .header {
@@ -643,6 +698,38 @@ body {
 
 .col-3-of-4 {
   width: calc(3*((100% - 3*6rem)/4) + 2*6rem);
+}
+
+.footer {
+  background-color: #333333;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+}
+.footer__logo {
+  width: 12rem;
+}
+.footer__item {
+  list-style: none;
+  display: inline;
+}
+.footer__item:not(:last-child) {
+  margin-right: 5rem;
+}
+.footer__link:link, .footer__link:visited {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #777777;
+  display: inline-block;
+  transition: 0.5s all;
+}
+.footer__link:hover {
+  transform: rotate(-5deg) scale(1.2);
+  color: #FFFFFF;
 }
 
 .section-about {

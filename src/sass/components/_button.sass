@@ -8,6 +8,7 @@
         position: relative
         font-size: $font-size-h3
         border: none
+        cursor: pointer
     &:hover
         transform: translateY(-4px)
         box-shadow: $box-shadow
@@ -32,3 +33,8 @@
     &_animated
         animation: BtnToUp .5s ease-out 1s
         animation-fill-mode: backwards
+    &_brown
+        background-color: $color-brown-dark
+        color: $color-white
+        &::after
+            background-color: $color-brown-dark
