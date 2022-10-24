@@ -77,7 +77,27 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 5px;
+  }
+}
+@media (min-width: 1800px) {
+  html {
+    font-size: 13px;
+  }
 }
 
 body {
@@ -760,11 +780,11 @@ body {
 }
 .navigation__icon {
   position: relative;
-  margin-top: 37px;
+  margin-top: 3.7rem;
 }
 .navigation__icon, .navigation__icon::before, .navigation__icon::after {
-  width: 40px;
-  height: 2px;
+  width: 4rem;
+  height: 0.2rem;
   background: #000000;
   display: inline-block;
   transition: all 0.2s;
@@ -775,16 +795,16 @@ body {
   left: 0;
 }
 .navigation__icon::before {
-  top: -8px;
+  top: -0.8rem;
 }
 .navigation__icon::after {
-  top: 8px;
+  top: 0.8rem;
 }
 .navigation__button:hover .navigation__icon::before {
-  top: -10px;
+  top: -1rem;
 }
 .navigation__button:hover .navigation__icon::after {
-  top: 10px;
+  top: 1rem;
 }
 .navigation__toggle:checked + .navigation__button .navigation__icon {
   background: transparent;
