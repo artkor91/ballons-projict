@@ -7,8 +7,12 @@
     transform: skewX(-15deg)
     position: relative
     z-index: -1
+    @include respond(tab-port)
+        padding: 4rem 6rem
     & > *
         transform: skewX(15deg)
+        @include respond(tab-port)
+            text-align: center
     &__img
         width: 16.7rem
         height: 16.7rem
@@ -20,6 +24,10 @@
         margin-right: 4rem
         overflow: hidden
         position: relative
+        @include respond(tab-port)
+            float: none
+            margin: 0 auto
+            margin-bottom: 2rem
         img
             height: 100%
             transform: scale(1.2)

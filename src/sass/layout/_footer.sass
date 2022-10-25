@@ -4,12 +4,13 @@
     padding-bottom: 4rem
     &__logo
         width: 12rem
-    &__menu
     &__item
         list-style: none
         display: inline
         &:not(:last-child)
             margin-right: 5rem
+            @include respond(tab-land)
+                margin-right: 3rem
     &__link
         &:link, &:visited
             text-decoration: none

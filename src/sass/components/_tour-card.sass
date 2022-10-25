@@ -3,6 +3,8 @@
     position: relative
     perspective: 150rem
     -moz-perspective: 150rem
+    @include respond(tab-port)
+        height: 60rem
     &__side
         position: absolute
         height: 50rem
@@ -20,16 +22,19 @@
         &_back
             background: linear-gradient(90.05deg, $color-brown-lite 0.03%, $color-brown-dark 99.94%)
             transform: rotateY(180deg)
+        @include respond(tab-port)
+            height: 60rem
     &:hover &__side_front
         transform: rotateY(-180deg)
     &:hover &__side_back
         transform: rotateY(0deg)
     &__img
         height: 24rem
-        
         background-blend-mode: hard-light
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
         margin-bottom: 4.5rem
+        @include respond(tab-port)
+            height: 30rem
         &_1
             background: $color-brown-lite url("../img/card-tour-1.png")
         &_2
@@ -47,6 +52,9 @@
         position: absolute
         right: 0
         top: 17.7rem
+        @include respond(tab-port)
+            top: 24rem
+            font-size: 3.8rem
     &__span
         background: linear-gradient(90deg, $color-brown-lite 0.04%, $color-brown-dark 100%)
         padding: 1rem 2rem .3rem 2rem
@@ -57,6 +65,8 @@
             z-index: 1
             padding-bottom: 1rem
             padding-top: .3rem
+        @include respond(tab-port)
+            top: 4.4rem
     &__descript
         ul
             list-style: none
@@ -71,6 +81,8 @@
                     margin-bottom: 2rem
                 span
                     border-bottom: 1px solid $color-gray
+                @include respond(tab-port)
+                    font-size: 2rem
     &__backside-box
         position: absolute
         top: 50%

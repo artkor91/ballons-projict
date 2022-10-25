@@ -17,6 +17,11 @@ body
     animation-delay: 1s
     animation-timing-function: ease-in
     backface-visibility: hidden
+    @include respond(tab-land)
+        font-size: 4rem
+    @include respond(tab-port)
+        font-size: 3.6rem
+        letter-spacing: .5rem
     &__secondary
         color: $color-white
         font-size: 4rem
@@ -29,6 +34,12 @@ body
         animation-timing-function: ease-in
         backface-visibility: hidden
         margin-bottom: 5rem
+        @include respond(tab-land)
+            font-size: 3.5rem
+            margin-bottom: 3.5rem
+        @include respond(tab-port)
+            font-size: 3rem
+            letter-spacing: .2rem
 
 .title-second
     font-weight: 800
@@ -41,8 +52,13 @@ body
     color: transparent
     text-shadow: (0rem .4rem .4rem rgba(0, 0, 0, 0.25))
     text-align: center
+    @include respond(tab-land)
+        font-size: 3rem
     &_white
         color:$color-white
+    @include respond(tab-port)
+            letter-spacing: .6rem
+    
 
 .title-third
     font-weight: 700
@@ -50,9 +66,13 @@ body
     line-height: 2.4rem
     letter-spacing: .2rem
     text-transform: uppercase
+    @include respond(tab-land)
+        font-size: 1.8rem
 
 .paragraph
     font-weight: 400
     font-size: $font-size-par
     line-height: 140%
     letter-spacing: .2rem
+    @include respond(tab-land)
+        font-size: 1.5rem
