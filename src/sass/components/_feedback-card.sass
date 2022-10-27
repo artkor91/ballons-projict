@@ -9,10 +9,15 @@
     z-index: -1
     @include respond(tab-port)
         padding: 4rem 6rem
+    @include respond(phone)
+        max-width: 70%
+        transform: skewX(-12deg)
     & > *
         transform: skewX(15deg)
         @include respond(tab-port)
             text-align: center
+        @include respond(phone)
+            transform: skewX(12deg)
     &__img
         width: 16.7rem
         height: 16.7rem

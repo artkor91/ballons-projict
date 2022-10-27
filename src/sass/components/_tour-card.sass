@@ -3,8 +3,9 @@
     position: relative
     perspective: 150rem
     -moz-perspective: 150rem
-    @include respond(tab-port)
-        height: 60rem
+    @media only screen and (max-width: 900px), (hover:none)
+        height: auto
+
     &__side
         position: absolute
         height: 50rem
@@ -17,15 +18,23 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1)
         border-radius: .3rem
         overflow: hidden
+        @media only screen and (max-width: 900px), (hover:none)
+            position: relative
         &_front
             background: #FFFFFF
         &_back
             background: linear-gradient(90.05deg, $color-brown-lite 0.03%, $color-brown-dark 99.94%)
             transform: rotateY(180deg)
-        @include respond(tab-port)
-            height: 60rem
+            @media only screen and (max-width: 900px), (hover:none)
+                transform: rotateY(0deg)
+                clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%)
+                margin-top: -10rem
+        @media only screen and (max-width: 900px), (hover:none)
+            height: auto
     &:hover &__side_front
         transform: rotateY(-180deg)
+        @media only screen and (max-width: 900px), (hover:none)
+                transform: rotateY(0deg)
     &:hover &__side_back
         transform: rotateY(0deg)
     &__img
@@ -33,7 +42,7 @@
         background-blend-mode: hard-light
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
         margin-bottom: 4.5rem
-        @include respond(tab-port)
+        @media only screen and (max-width: 900px), (hover:none)
             height: 30rem
         &_1
             background: $color-brown-lite url("../img/card-tour-1.png")
@@ -52,7 +61,7 @@
         position: absolute
         right: 0
         top: 17.7rem
-        @include respond(tab-port)
+        @media only screen and (max-width: 900px), (hover:none)
             top: 24rem
             font-size: 3.8rem
     &__span
@@ -65,9 +74,11 @@
             z-index: 1
             padding-bottom: 1rem
             padding-top: .3rem
-        @include respond(tab-port)
+        @media only screen and (max-width: 900px), (hover:none)
             top: 4.4rem
     &__descript
+        @media only screen and (max-width: 900px), (hover:none)
+            margin-bottom: 12rem
         ul
             list-style: none
             li
@@ -81,13 +92,22 @@
                     margin-bottom: 2rem
                 span
                     border-bottom: 1px solid $color-gray
-                @include respond(tab-port)
+                @media only screen and (max-width: 900px), (hover:none)
                     font-size: 2rem
     &__backside-box
         position: absolute
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
+        @media only screen and (max-width: 900px), (hover:none)
+            position: relative
+            top: 0%
+            left: 0%
+            transform: translate(0%, 0%)
+            padding: 5rem
+            padding-top: 12rem
+            text-align: center
+            
     &__text
         margin-bottom: 8.7rem
         &_1
