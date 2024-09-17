@@ -3,15 +3,24 @@
     background: linear-gradient(115deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 55%, rgba(186,133,84,0.7) 55%, rgba(161,79,3,0.7) 100%), url(../img/bg-form.jpg) center / cover no-repeat
     box-shadow: $box-shadow
     border-radius: 0.5rem
+    @include respond(tab-port)
+        background: linear-gradient(115deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 550%, rgba(186,133,84,0.7) 55%, rgba(161,79,3,0.7) 100%), url(../img/bg-form.jpg)
     
 
 .form
-    width:60%
+    width:70%
     padding: 5rem
+    @include respond(tab-port)
+        width:100%
     &__group:not(:last-child)
         margin-bottom: 2rem
+        @include respond(tab-land)
+            margin-bottom: 1rem
     &__group:nth-child(4)
         margin-bottom: 4rem
+        @include respond(tab-land)
+            margin-bottom: 3rem
+
     
     &__input
         font-weight: 400
@@ -24,6 +33,9 @@
         border-radius: .5rem
         border-bottom: .3rem solid transparent
         width: 51%
+        @include respond(tab-port)
+            width:100%
+            box-shadow: $box-shadow
         &:focus
             outline: none
             border-bottom: .3rem solid #66D763
@@ -47,8 +59,15 @@
         visibility: hidden
         transform: translateY(-3rem)
     &__group-radio
-        width: 40%
         display: inline-block
+        &:not(:last-child)
+            margin-right: 6rem
+        @include respond(tab-land)
+            display: block
+            &:not(:last-child)
+                margin-bottom: 2rem
+
+            
     &__label-radio
         font-weight: 400
         font-size: $font-size-par
@@ -58,6 +77,8 @@
         cursor: pointer
         position: relative
         padding-left: 1.2rem
+        @include respond(tab-port)
+            padding-left: 4rem
     &__button-radio
         height: 3rem
         width: 3rem
@@ -67,6 +88,8 @@
         position: absolute
         top: -.6rem
         left: -2.8rem
+        @include respond(tab-port)
+            left: 0
         &::after
             content: ""
             display: block

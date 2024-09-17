@@ -9,6 +9,8 @@
         font-size: $font-size-h3
         border: none
         cursor: pointer
+        @include respond(tab-port)
+            padding: 2rem 5rem
     &:hover
         transform: translateY(-4px)
         box-shadow: $box-shadow

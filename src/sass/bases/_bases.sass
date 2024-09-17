@@ -4,7 +4,17 @@
     box-sizing: border-box
 
 html
-    font-size: 10px
+    font-size: 62.5%
+    @include respond(tab-land)
+        font-size: 9px
+    @include respond(tab-port)
+        font-size: 8px
+    @include respond(phone)
+        font-size: 5px
+    @include respond(big-screen)
+        font-size: 13px
+    
+
 
 body
     padding: 5rem

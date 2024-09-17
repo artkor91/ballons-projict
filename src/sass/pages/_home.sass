@@ -1,11 +1,18 @@
 .section-about
     padding-top: 8rem
+    @include respond(tab-land)
+        padding-top: 6rem
+        margin-bottom: 6rem
+    @include respond(tab-port)
+         margin-bottom: 40rem
 
 .section-adventure
     padding: 21rem 0 21rem 0
     background: linear-gradient(90.05deg, rgba($color-brown-lite, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url(../img/bacground-adv-sect.png) center / cover no-repeat
     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%)
-
+    @include respond(tab-land)
+        font-size: 9px
+        padding: 15rem 0 15rem 0
 .section-tour
     padding-top: 21rem
 
@@ -16,5 +23,7 @@
 .section-book
     padding: 10rem
     background: linear-gradient(90deg, $color-brown-lite, $color-brown-dark)
+    @include respond(phone)
+        padding: 5rem
 
     
